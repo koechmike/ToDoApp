@@ -1,0 +1,130 @@
+:root {--dark: #374151;
+    --darker: #1f2937;
+    --darkest: #111827;
+    --gray: #6b72b0;
+    --light: #eee;
+    --pink: #EC4899;
+    --purple: #8b5cf6;
+}
+    
+*  {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "ink free";
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #fff;
+}
+header {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+#new-task-form {
+    display: flex;
+}
+input,button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#new-task-input {
+    flex: 110%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+#new-task-input::placeholder {
+    color: var(--gray);
+}
+#new-task-submit{
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 1000;
+    background-image: linear-gradient(to left, var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: grab;
+    transition: 0.4s;
+}
+#new-task-submit:hover{
+    opacity: 0.6;
+}
+#new-task-submit:active{
+    opacity: 0.3;
+}
+main {
+    flex: 110%;
+    padding: 0.5rem 1rem;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.task-list {
+    padding: 1rem;
+}
+.task-list h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+#tasks {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+#tasks .content .text{
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 4s;
+}
+#tasks .content .text:not(:read-only){
+    color: var(--pink);
+}
+#tasks .actions {
+    display: flex;
+    margin: 0 0.5rem;
+}
+#tasks .actions button {
+    color: var(--pink);
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 1000;
+    cursor: grab;
+    transition: 0.4s;
+}
+#tasks .actions button:hover{
+    opacity: 0.6;
+}
+#tasks .actions button:active{
+    opacity: 0.3;
+}
+#tasks .actions .edit {
+    background-image: linear-gradient(to left, var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#tasks .actions .delete {
+    color: red;
+}  
